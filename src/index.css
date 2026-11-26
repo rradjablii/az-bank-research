@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+  color-scheme: light;
+  --bg: #f5f7fa;
+  --surface: #ffffff;
+  --surface-2: #f0f3f7;
+  --line: #e2e7ee;
+  --ink: #111a2b;
+  --ink-2: #55627a;
+  --accent: #0f766e;
+  --series-1: #257de0;
+  --series-2: #f47230;
+  --series-3: #00b894;
+  --good: #0a6b2c;
+  --warn: #8a5300;
+  --bad: #b42323;
+  --grid: #e8ecf2;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0a1120;
+  --surface: #101a2d;
+  --surface-2: #16223a;
+  --line: #223050;
+  --ink: #e8edf6;
+  --ink-2: #99a7c0;
+  --accent: #3ccfbd;
+  --series-1: #338ced;
+  --series-2: #e76624;
+  --series-3: #00a888;
+  --good: #4fc778;
+  --warn: #e0a94a;
+  --bad: #f07a7a;
+  --grid: #1d2a45;
+}
+
+@theme inline {
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-accent: var(--accent);
+  --color-good: var(--good);
+  --color-warn: var(--warn);
+  --color-bad: var(--bad);
+}
+
+body { @apply bg-bg text-ink font-sans antialiased; font-size: 14px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.num { font-variant-numeric: tabular-nums; }
+.field { @apply h-9 w-full min-w-0 rounded-md border border-line bg-surface px-2.5 text-sm text-ink; }
+.btn { @apply inline-flex h-9 items-center justify-center rounded-md border border-line bg-surface px-3 text-sm font-medium hover:bg-surface-2 disabled:opacity-50; }
+.btn-primary { @apply border-transparent bg-[#0f766e] text-white hover:bg-[#0b5f59]; }
+.badge { @apply inline-block whitespace-nowrap rounded border border-line px-1.5 py-0.5 text-[11px] font-medium; }
+.link { @apply text-accent underline-offset-2 hover:underline; }
+.data { @apply w-full border-collapse text-sm; }
+.data th { @apply whitespace-nowrap border-b border-line px-3 py-2 text-left text-xs font-medium text-ink-2; }
+.data td { @apply border-b border-line px-3 py-2 align-top; }
+.data tbody tr:last-child td { @apply border-b-0; }
+.data .r { @apply text-right; }
+.prose-sm p { @apply mb-2 leading-relaxed text-ink-2; }
+.prose-sm ul { @apply mb-2 list-disc space-y-1 pl-5 text-ink-2; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
