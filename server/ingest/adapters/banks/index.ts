@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import type { Collected, OfferRecord, SourceAdapter } from '../../types.js';
+import { STALE_AFTER_HOURS, type Collected, type OfferRecord, type SourceAdapter } from '../../types.js';
 import type { ProductBase } from './common.js';
 import * as d from './deposits.js';
 import { parseLoan, type LoanSpec } from './loans.js';
@@ -43,13 +43,13 @@ function bank(slug: string, name: string, website: string, pages: Page[], note?:
     kind: 'bank_website',
     url: pages[0]!.base.productUrl,
     format: 'HTML',
-    updateFrequency: 'Irregular (checked daily)',
+    updateFrequency: 'Irregular (checked twice a month)',
     accessStatus: 'active',
     accessNote: note,
     bank: { slug, name, website },
     hosts: [...new Set([host, ...pages.map((p) => new URL(p.base.productUrl).hostname)])],
     minRefreshHours: 12,
-    staleAfterHours: 48,
+    staleAfterHours: STALE_AFTER_HOURS,
     async collect(fetcher): Promise<Collected> {
       const result: Collected = { documents: [], offers: [], terms: [], warnings: [] };
       for (const page of pages) {
@@ -166,7 +166,7 @@ export function unavailableBank(slug: string, name: string, website: string, rea
     publisher: name,
     bank: { slug, name, website },
     minRefreshHours: 12,
-    staleAfterHours: 48,
+    staleAfterHours: STALE_AFTER_HOURS,
   };
   if (!feed) {
     return {

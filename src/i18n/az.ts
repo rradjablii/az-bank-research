@@ -129,7 +129,7 @@ export const az: Messages = {
   me_p1: 'Server adapterləri açıq səhifələri və rəsmi faylları HTTPS ilə yükləyir, robots.txt və gözləmə intervallarına əməl edir, müvəqqəti xətalarda təkrar cəhd edir və heç vaxt giriş məhdudiyyətlərini aşmır.',
   me_p2: 'Çıxarılan mənbə məzmunu yoxlanılmış və normallaşdırılmış qeydlərdən ayrıca saxlanılır. Ağlabatan olmayan və ziddiyyətli qiymətlər rədd edilib jurnala yazılır.',
   me_p3: 'Tarix qorunur: dəyişən faiz köhnə müşahidəni bağlayıb yenisini açır. Dəyişməyən faizdə yalnız yoxlama vaxtı yenilənir.',
-  me_p4: 'Planlaşdırılmış tapşırıq hər gün yeniləyir. Uğursuz mənbənin son yoxlanmış qiymətləri «yenilənməyib» işarəsi ilə qalır. Heç nə uydurulmur.',
+  me_p4: 'Planlaşdırılmış tapşırıq hər ayın 1-i və 15-də yeniləyir, ona görə rəqəmlər təxminən iki həftəlik ola bilər. Uğursuz mənbənin son yoxlanmış qiymətləri «yenilənməyib» işarəsi ilə qalır. Heç nə uydurulmur.',
   me_compare: 'Müqayisə qaydaları',
   me_c1: 'Təkliflər yalnız eyni məhsul növü, valyuta, müddət və ödəniş üsulu daxilində müqayisə edilir.',
   me_c2: 'Kampaniya, sığortalanmayan və köhnə prolonqasiya faizləri siz daxil etməyincə statistikaya salınmır.',

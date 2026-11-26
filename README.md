@@ -79,7 +79,7 @@ The figure check catches invented numbers. It cannot catch a correct number used
 
 ### Scheduled refresh
 
-`vercel.json` declares a daily **Vercel Schedule** (`0 4 * * *` UTC) that invokes the private function `api/cron-ingest.ts`. It needs no secret because it has no public URL. Vercel Schedules is in public beta and this part could not be tested without a deployment. After deploying, verify with `vercel schedules list` and `vercel schedules invoke daily-ingest`. If it is unavailable to you, remove the `schedules` and `experimentalTriggers` entries and have any scheduler send the request from step 6.
+`vercel.json` declares a twice-monthly **Vercel Schedule** (`0 4 1,15 * *`: 04:00 UTC on the 1st and 15th) that invokes the private function `api/cron-ingest.ts`. It needs no secret because it has no public URL. Vercel Schedules is in public beta and this part could not be tested without a deployment. After deploying, verify with `vercel schedules list` and `vercel schedules invoke daily-ingest` (the job kept its original name so its run history is not reset). A source is marked stale after 18 days. A failed run is not retried until the next date, so refresh manually when a source fails. If it is unavailable to you, remove the `schedules` and `experimentalTriggers` entries and have any scheduler send the request from step 6.
 
 `regions` is set to `fra1`, the nearest region to the sources.
 

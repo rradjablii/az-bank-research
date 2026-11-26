@@ -127,7 +127,7 @@ export const en = {
   me_p1: 'Server-side adapters fetch public pages and official workbooks over HTTPS, obey robots.txt and crawl delays, retry transient errors and never bypass access controls.',
   me_p2: 'The extracted source content is stored separately from validated, normalised records. Implausible or conflicting values are rejected and logged.',
   me_p3: 'History is preserved: a changed rate closes the old observation and opens a new one. An unchanged rate only updates its verification time.',
-  me_p4: 'A scheduled job refreshes daily. A failed source keeps its last verified values, marked as not refreshed. Nothing is filled in.',
+  me_p4: 'A scheduled job refreshes on the 1st and 15th of each month, so figures can be about two weeks old. A failed source keeps its last verified values, marked as not refreshed. Nothing is filled in.',
   me_compare: 'Comparability rules',
   me_c1: 'Offers are compared only within one product type, currency, term and payment method.',
   me_c2: 'Campaign, uninsured and legacy-renewal rates are excluded from statistics unless you include them.',

@@ -72,6 +72,9 @@ export interface BankRef {
   website: string;
 }
 
+/** The schedule runs on the 1st and 15th (at most 17 days apart), plus one day of slack. */
+export const STALE_AFTER_HOURS = 18 * 24;
+
 export interface SourceAdapter {
   key: string;
   name: string;

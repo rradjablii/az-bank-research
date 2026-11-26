@@ -15,7 +15,7 @@ const az: Record<string, string> = {
   'Yelo Sərbəst flexible deposit': 'Yelo Sərbəst depozit', 'Standard term deposit': 'Standart müddətli depozit', 'Cash consumer loan': 'Nağd istehlak krediti',
   'Partial withdrawals permitted': 'Qismən çıxarışa icazə verilir', 'Interest paid upfront when the deposit is opened': 'Faiz əmanət açılan kimi əvvəlcədən ödənilir',
   'Interest capitalised monthly, paid at maturity': 'Faiz hər ay kapitallaşdırılır, müddətin sonunda ödənilir',
-  Monthly: 'Aylıq', 'Irregular (checked daily)': 'Qeyri-müntəzəm (hər gün yoxlanılır)', 'Operator-defined': 'Operator tərəfindən müəyyən edilir',
+  Monthly: 'Aylıq', 'Irregular (checked twice a month)': 'Qeyri-müntəzəm (ayda iki dəfə yoxlanılır)', 'Operator-defined': 'Operator tərəfindən müəyyən edilir',
   'Central Bank of the Republic of Azerbaijan': 'Azərbaycan Respublikasının Mərkəzi Bankı',
   'Central Bank of Azerbaijan, citing the State Statistics Committee': 'Azərbaycan Mərkəzi Bankı (Dövlət Statistika Komitəsinə istinadən)',
   'CBAR — average interest rates on deposits and loans (tables 3.2, 3.2.1)': 'AMB — depozit və kreditlər üzrə orta faiz dərəcələri (cədvəl 3.2, 3.2.1)',

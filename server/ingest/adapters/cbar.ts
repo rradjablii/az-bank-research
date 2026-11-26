@@ -1,6 +1,6 @@
 import * as cheerio from 'cheerio';
 import { cellDate, readSheets, type Row } from '../xlsx.js';
-import type { Collected, InflationRecord, MarketRecord, PolicyRecord, SourceAdapter } from '../types.js';
+import { STALE_AFTER_HOURS, type Collected, type InflationRecord, type MarketRecord, type PolicyRecord, type SourceAdapter } from '../types.js';
 import type { CurrencyGroup, Segment } from '../../../shared/types.js';
 import { addMonths } from '../../../shared/finance.js';
 
@@ -226,7 +226,7 @@ export const cbarRates: SourceAdapter = {
   accessStatus: 'active',
   hosts: HOSTS,
   minRefreshHours: 12,
-  staleAfterHours: 24 * 7,
+  staleAfterHours: STALE_AFTER_HOURS,
   collect: collectRates,
 };
 
@@ -241,7 +241,7 @@ export const cbarCpi: SourceAdapter = {
   accessStatus: 'active',
   hosts: HOSTS,
   minRefreshHours: 12,
-  staleAfterHours: 24 * 7,
+  staleAfterHours: STALE_AFTER_HOURS,
   async collect(fetcher) {
     const url = findLatestBulletin(await fetcher.text(BULLETINS));
     const data = await fetcher.bytes(url);

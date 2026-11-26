@@ -72,3 +72,8 @@ Baseline: type check clean, 94/94 tests pass, 0 npm advisories. Backup taken bef
 ## Blockers needing you
 
 Vercel and Neon accounts · an `ANTHROPIC_API_KEY` for the assistant · permission or feeds from uncollected banks.
+
+## After deployment
+
+- Live at https://az-bank-research.vercel.app. First refresh: 10 banks and CBAR rates succeeded; CPI/policy download failed (socket closed by uploads.cbar.az); Bank Respublika returned 403 to Vercel; AFB as before.
+- Schedule changed to the 1st and 15th; stale threshold 18 days (146 tests pass). Whether Vercel actually runs the schedule is not yet verified.
